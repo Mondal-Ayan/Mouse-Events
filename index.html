@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSE-EVENT</title>
+    <style>
+        #div1{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            margin: 0 auto;
+            box-shadow: inset 0 0 10px black;
+            transition: all 0.6s linear;
+
+        }
+        #btn1{
+            margin: 0 auto;
+            display: block;
+            margin-top: 50px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(76, 225, 76);
+            border-radius: 30px;
+            box-shadow: inset 0 0 10px black;
+            
+        }
+        .div2{
+            border-radius: 50%;
+        }
+        .div3{
+            border-radius: 50%;
+            background-color: #f5ee62;
+            translate: -20rem 0;
+        }
+        .div4{
+            border-radius: 50%;
+            background-color: #f5ee62;
+            translate: 20rem 0;
+        }
+        .div5{
+            translate: -20rem 0;
+        }
+        .div6{
+            border-radius: 0%;
+            background-color: red;
+            translate: 0rem 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="btn1">click here</button>
+    <script>
+        const handleMouseEvents = () => {
+            console.log('Mouse Event');
+            div1.style.backgroundColor = "#f5ee62";
+        };
+        const handleMouseEvents2 = () => {
+            console.log('Mouse Event2');
+            div1.classList.add('div2');
+        };
+        const handleMouseEvents3 = () => {
+            console.log('Mouse Event3');
+            div1.classList.add('div3');
+        };
+        const handleMouseEvents4 = () => {
+            console.log('Mouse Event4');
+            div1.classList.add('div4');
+        };
+        const handleMouseEvents5 = () => {
+            console.log('Mouse Event5');
+            div1.classList.add('div5');
+        };
+        const handleMouseEvents6 = () => {
+            console.log('Mouse Event6');
+            div1.classList.add('div6');
+        };
+        var div1 = document.getElementById('div1');
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', handleMouseEvents);
+        btn1.addEventListener('dblclick', handleMouseEvents2);
+        btn1.addEventListener('mouseover',handleMouseEvents3);
+        btn1.addEventListener('mouseout',handleMouseEvents4);
+        btn1.addEventListener('mousedown',handleMouseEvents5);
+        btn1.addEventListener('mouseup',handleMouseEvents6);
+    </script>
+</body>
+</html>
